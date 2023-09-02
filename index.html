@@ -12,9 +12,6 @@
         }
         .container {
             margin-top: 20px;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
         }
         /* Adjust some styles for smaller screens */
         @media (max-width: 576px) {
@@ -36,28 +33,40 @@
                     <!-- Existing code above this line -->
                         <form action="#" method="POST">
                             <div class="form-group">
-                                <div class="form-check form-check-inline">
-                                    <input class="form-check-input" type="radio" name="gender-siswa" id="gender-siswa-pria" value="M" required>
-                                    <label class="form-check-label" for="gender-siswa-pria">Pria</label>
+                                <div class="form-group col-md-4">
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="radio" name="gender-siswa" id="gender-siswa-pria" value="M" required>
+                                        <label class="form-check-label" for="gender-siswa-pria">Pria</label>
+                                    </div>
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="radio" name="gender-siswa" id="gender-siswa-wanita" value="F" required>
+                                        <label class="form-check-label" for="gender-siswa-wanita">Wanita</label>
+                                    </div>
                                 </div>
-                                <div class="form-check form-check-inline">
-                                    <input class="form-check-input" type="radio" name="gender-siswa" id="gender-siswa-wanita" value="F" required>
-                                    <label class="form-check-label" for="gender-siswa-wanita">Wanita</label>
+                                <div class="form-group col-md-8">
+                                    <label for="full-name">Nama Lengkap Siswa/i</label>
+                                    <input type="text" class="form-control" id="full-name-siswa" name="full-name-siswa" required>
                                 </div>
-                                <label for="full-name">Nama Lengkap Siswa/i</label>
-                                <input type="text" class="form-control" id="full-name-siswa" name="full-name-siswa" required>
                             </div>
                             <div class="form-group">
-                                <div class="form-check form-check-inline">
-                                    <input class="form-check-input" type="radio" name="gender-wali" id="gender-wali-pria" value="M" required>
-                                    <label class="form-check-label" for="gender-wali-pria">Bapak</label>
+                                <label for="country">Usia</label>
+                                <input type="number" class="form-control" id="age" name="age" required>
+                            </div>
+                            <div class="form-row">
+                                <div class="form-group col-md-4">
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="radio" name="gender-wali" id="gender-wali-pria" value="M" required>
+                                        <label class="form-check-label" for="gender-wali-pria">Bapak</label>
+                                    </div>
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="radio" name="gender-wali" id="gender-wali-wanita" value="F" required>
+                                        <label class="form-check-label" for="gender-wali-wanita">Ibu</label>
+                                    </div>
                                 </div>
-                                <div class="form-check form-check-inline">
-                                    <input class="form-check-input" type="radio" name="gender-wali" id="gender-wali-wanita" value="F" required>
-                                    <label class="form-check-label" for="gender-wali-wanita">Ibu</label>
+                                <div class="form-group col-md-8">
+                                    <label for="full-name">Nama Lengkap Wali Siswa/i</label>
+                                    <input type="text" class="form-control" id="full-name-parent" name="full-name-parent" required>
                                 </div>
-                                <label for="full-name">Nama Lengkap Wali Siswa/i</label>
-                                <input type="text" class="form-control" id="full-name-parent" name="full-name-parent" required>
                             </div>
                             <div class="form-row">
                                 <div class="form-group col-md-6">
@@ -70,14 +79,11 @@
                                 </div>
                             </div>
                             <div class="form-group">
-                                <label for="country">Domisili</label>
-                                <select class="form-control" id="country" name="country" required>
-                                    <option value="" disabled selected>Select your country</option>
-                                    <!-- Add options for countries here -->
-                                </select>
+                                <label for="country">Kota Domisili</label>
+                                <input type="text" class="form-control" id="domisili" name="domisili" required>
                             </div>
                             <div class="form-group">
-                                <label>Study Level</label>
+                                <label>Level Bahasa Jerman</label><br>
                                 <div class="form-check form-check-inline">
                                     <input class="form-check-input" type="radio" name="study-level" id="study-level-tidakada" value="Tidak Ada" required>
                                     <label class="form-check-label" for="study-level-tidakada">Tidak Ada</label>
@@ -100,10 +106,34 @@
                                 </div>
                             </div>
                             <div class="form-group">
+                                <label>Dalam skala 1-5, bagaimana kinerja siswa/i di sekolah?</label><br>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="academic" id="academic-1" value="1" required>
+                                    <label class="form-check-label" for="academic-1">1</label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="academic" id="academic-2" value="2" required>
+                                    <label class="form-check-label" for="academic-2">2</label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="academic" id="academic-3" value="3" required>
+                                    <label class="form-check-label" for="academic-3">3</label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="academic" id="academic-4" value="4" required>
+                                    <label class="form-check-label" for="academic-4">4</label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="academic" id="academic-5" value="5" required>
+                                    <label class="form-check-label" for="academic-5">5</label>
+                                </div>
+                                </div>
+                            </div>
+                            <div class="form-group">
                                 <label for="comments">Comments/Questions</label>
                                 <textarea class="form-control" id="comments" name="comments" rows="4"></textarea>
                             </div>
-                            <button type="submit" class="btn btn-primary btn-block">Register</button>
+                            <button type="submit" class="btn btn-primary btn-block">Konfirmasi Data</button>
                         </form>
                         <!-- Existing code below this line -->
 
