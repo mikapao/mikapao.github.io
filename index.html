@@ -50,8 +50,18 @@
                                 </div>
                             </div>
                             <div class="form-row">
+                                <div class="form-group col-md-6">
+                                    <label for="email">Alamat Email</label>
+                                    <input type="email" class="form-control" id="email" name="email" required>
+                                </div>
+                                <div class="form-group col-md-6">
+                                    <label for="phone">Nomor WhatsApp</label>
+                                    <input type="tel" class="form-control" id="phone" name="phone" required>
+                                </div>
+                            </div>
+                            <div class="form-row">
                                 <div class="form-group col-md-4">
-                                    <label for="full-name">Nama Lengkap Wali Siswa/i</label><br>
+                                    <label for="full-name">Nama Lengkap Wali</label><br>
                                     <div class="form-check form-check-inline">
                                         <input class="form-check-input" type="radio" name="gender-wali" id="gender-wali-pria" value="M" required>
                                         <label class="form-check-label" for="gender-wali-pria">Bapak</label>
@@ -68,23 +78,11 @@
                             </div>
                             <div class="form-row">
                                 <div class="form-group col-md-6">
-                                    <label for="email">Alamat Email</label>
-                                    <input type="email" class="form-control" id="email" name="email" required>
+                                    <label for="domisili">Kota Domisili</label>
+                                    <input type="text" class="form-control" id="domisili" name="domisili" required>
                                 </div>
                                 <div class="form-group col-md-6">
-                                    <label for="phone">Nomor WhatsApp</label>
-                                    <input type="tel" class="form-control" id="phone" name="phone" required>
-                                </div>
-                            </div>
-                            <div class="form-group">
-                                <label for="country">Kota Domisili</label>
-                                <input type="text" class="form-control" id="domisili" name="domisili" required>
-                            </div>
-                            <div class="form-row">
-                                <div class="form-group col-md-4">
-                                    <label for="country">Tahun Kelulusan</label>
-                                </div>
-                                <div class="form-group col-md-3">
+                                    <label for="lulus">Tahun Kelulusan SMA</label>
                                     <input type="number" class="form-control" id="lulus" name="lulus" value='2024' required>
                                 </div>
                             </div>
@@ -92,7 +90,7 @@
                                 <label>Level Bahasa Jerman</label><br>
                                 <div class="form-check form-check-inline">
                                     <input class="form-check-input" type="radio" name="study-level" id="study-level-tidakada" value="Tidak Ada" required>
-                                    <label class="form-check-label" for="study-level-tidakada">Tidak Ada</label>
+                                    <label class="form-check-label" for="study-level-tidakada">Belum Ada</label>
                                 </div>
                                 <div class="form-check form-check-inline">
                                     <input class="form-check-input" type="radio" name="study-level" id="study-level-a1" value="A1" required>
@@ -135,7 +133,7 @@
                                 </div>
                             </div>
                             <div class="form-group">
-                                <label>Kemampuan Pendanaan Hidup & Studi Siswa/i (per Tahun)</label><br>
+                                <label>Kemampuan Pendanaan Hidup & Studi (per Tahun)</label><br>
                                 <div class="form-check form-check-inline">
                                     <input class="form-check-input" type="radio" name="financial" id="financial-1" value="1" required>
                                     <label class="form-check-label" for="financial-1">0-50 juta</label>
